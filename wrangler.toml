@@ -2,14 +2,7 @@ name = "study-h5"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "./dist"
 
-[env.production]
-name = "study-h5"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "study-h5-db"
 database_id = "your-database-id"
-
-[[r2_buckets]]
-binding = "ASSETS"
-bucket_name = "study-h5-assets"
