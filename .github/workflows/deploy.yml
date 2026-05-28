@@ -1,8 +1,9 @@
-name: Deploy to Cloudflare Pages
+name: Deploy study-h5 to Cloudflare Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -12,19 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
-        env:
-          VITE_API_BASE_URL: ${{ vars.STUDY_API_URL }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
