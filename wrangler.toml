@@ -1,11 +1,3 @@
 name = "study-h5"
 compatibility_date = "2026-05-28"
 pages_build_output_dir = "dist"
-
-[build]
-command = "npm run build"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "study-h5-db"
-database_id = "your-database-id"
